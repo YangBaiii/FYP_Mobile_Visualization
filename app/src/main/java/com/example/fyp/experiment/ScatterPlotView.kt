@@ -119,10 +119,8 @@ class ScatterPlotView @JvmOverloads constructor(
         val regionDensity = pointDensity[regionIndex] ?: 1f
         val regionSuccessRate = regionPerformance[regionIndex] ?: 0.5f
 
-        // Update performance history
         performanceHistory.getOrPut(point.index) { mutableListOf() }.add(distance)
 
-        // Calculate adaptive radius based on multiple factors
         var newRadius = point.tapZoneRadius
 
         if (success) {
@@ -132,7 +130,7 @@ class ScatterPlotView @JvmOverloads constructor(
                 .coerceAtLeast(MIN_TAP_ZONE_RADIUS)
         } else {
             // On failure, increase radius based on multiple factors
-            val densityFactor = 1f + (regionDensity / 10f) // Higher density = larger increase
+            val densityFactor = 1f + (regionDensity / 10f)
             val performanceFactor = 1f + (1f - regionSuccessRate) // Worse performance = larger increase
             newRadius = (newRadius * densityFactor * performanceFactor)
                 .coerceAtMost(MAX_TAP_ZONE_RADIUS)

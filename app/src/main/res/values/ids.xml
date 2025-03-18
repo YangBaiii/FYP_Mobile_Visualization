@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tap_zone_button" type="id" />
+    <item name="two_step_button" type="id" />
+    <item name="launcher_layout" type="id" />
+</resources> 
