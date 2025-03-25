@@ -18,5 +18,9 @@ class ExperimentLauncherActivity : AppCompatActivity() {
         findViewById<Button>(R.id.two_step_button).setOnClickListener {
             startActivity(Intent(this, TwoStepSelectionActivity::class.java))
         }
+
+        findViewById<Button>(R.id.ad_selection_button).setOnClickListener {
+            startActivity(Intent(this, AdSelectionActivity::class.java))
+        }
     }
 } 

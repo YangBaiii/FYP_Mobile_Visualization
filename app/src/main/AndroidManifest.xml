@@ -36,6 +36,11 @@
             android:name=".experiment.TwoStepSelectionActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        
+        <activity
+            android:name=".experiment.AdSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
     </application>
 
 </manifest>

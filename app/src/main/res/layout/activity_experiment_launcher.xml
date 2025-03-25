@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/launcher_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -24,6 +25,13 @@
         android:id="@+id/two_step_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Two-Step Selection Experiment"/>
+        android:text="Two-Step Selection Experiment"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/ad_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ad Selection Experiment"/>
 
 </LinearLayout> 
